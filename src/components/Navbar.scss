@@ -1,0 +1,84 @@
+.nav_container {
+    display: flex;
+    padding: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+
+    .logo {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media only screen and (max-width: 600px) {
+            justify-content: start;
+        }
+
+        img {
+            width: 125px;
+        }
+    }
+
+    .center {
+        display: flex;
+        gap: 30px;
+        flex: 4;
+
+        @media only screen and (max-width: 600px) {
+            display: none;
+        }
+
+        .nav_item {
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: #6e65ef;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #d3d0fe;
+            }
+        }
+
+        .active {
+            background-color: #e8e7f5;
+        }
+    }
+
+    .left {
+        flex: 1;
+        display: flex;
+        gap: 20px;
+        .nav_btn {
+            padding: 8px 15px;
+            font-weight: 700;
+            border-radius: 5px;
+            border: 1px solid #6e65ef;
+        }
+
+        .login {
+            color: #6e65ef;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #d3d0fe;
+            }
+        }
+
+        .signup {
+            color: #fff;
+            background-color: #6e65ef;
+
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: #5044f0;
+            }
+        }
+    }
+}
